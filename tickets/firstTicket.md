@@ -32,7 +32,7 @@ Deliver the following Domain Objects (Entities / DTO / ENUM):
 - codeReviewer: User
 
 ## DTOs
-- AssignemntResponseDto
+- AssignmentResponseDto
 - AuthCredentialRequest
 
 ## Enums

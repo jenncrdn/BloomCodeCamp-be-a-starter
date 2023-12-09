@@ -9,9 +9,9 @@ public enum HelloEnum {
     Greeting3(3, "Good Evening"),
     Greeting4(4, "Good Night");
 
-    private int greetingNumber;
+    private final int greetingNumber;
 
-    private String greetingMessage;
+    private final String greetingMessage;
     HelloEnum(int greetingNumber, String greetingMessage) {
         this.greetingNumber = greetingNumber;
         this.greetingMessage = greetingMessage;

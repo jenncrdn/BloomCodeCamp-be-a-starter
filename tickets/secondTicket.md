@@ -45,6 +45,7 @@ import org.springframework.stereotype.Component;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.function.Function;
 
 @Component
@@ -90,7 +91,7 @@ public class JwtUtil implements Serializable {
     private String doGenerateToken(String subject) {
 
         Claims claims = Jwts.claims().setSubject(subject);
-        claims.put("scopes", Arrays.asList(new SimpleGrantedAuthority("ROLE_ADMIN")));
+        claims.put("scopes", List.of(new SimpleGrantedAuthority("ROLE_ADMIN")));
 
         return Jwts.builder()
                 .setClaims(claims)
