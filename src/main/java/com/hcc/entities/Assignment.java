@@ -1,13 +1,24 @@
 package com.hcc.entities;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "assignments")
 public class Assignment {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "status")
     private String status;
     private Integer number;
     private String githubUrl;
     private String branch;
     private String reviewVideoUrl;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "userId")
     private User user;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "codeReviewerId")
     private User codeReviewer;
 
     public Assignment() {

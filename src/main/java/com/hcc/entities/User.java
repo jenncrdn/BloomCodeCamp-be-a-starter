@@ -3,26 +3,32 @@ package com.hcc.entities;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 
+@Entity
+@Table(name = "users")
 public class User implements UserDetails {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "cohort_start_date")
     private Date cohortStartDate;
     private String username;
     private String password;
-    private List<Authority> authorities;
+//    private List<Authority> authorities;
 
     public User() {
     }
 
-    public User(Date cohortStartDate, String username, String password, List<Authority> authorities) {
+    public User(Date cohortStartDate, String username, String password) {
         this.cohortStartDate = cohortStartDate;
         this.username = username;
         this.password = password;
-        this.authorities = authorities;
+//        this.authorities = authorities;
     }
 
     @Override
