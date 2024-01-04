@@ -1,0 +1,52 @@
+.assignment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Spacing between sections */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Headings */
+.assignment-list h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Assignment list */
+.assignment-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.assignment-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Visually differentiate assignment statuses */
+.assignment-list li[data-status="working"] {
+  background-color: #f0f0f0;
+}
+
+.assignment-list li[data-status="submitted"] {
+  background-color: #ffffe0;
+}
+
+.assignment-list li[data-status="rejected"] {
+  background-color: #f5e0e0;
+}
+
+.assignment-list li[data-status="completed"] {
+  background-color: #e0f5e0;
+}
+
+.assignment-list li a {
+  color: blue;
+  text-decoration: none;
+}
+
+.assignment-list li a:hover {
+  text-decoration: underline;
+}
