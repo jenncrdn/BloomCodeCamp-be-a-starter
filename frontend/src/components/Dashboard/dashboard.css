@@ -27,3 +27,28 @@ body {
   font-family: sans-serif;
   background-color: #f5f5f5;
 }
+
+/* Key features section styles */
+.key-assignments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+.feature-assignment {
+  flex-basis: 50%;
+  padding: 30px;
+  text-align: left;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: #DEDBD2;
+  font-color: 4A5759;
+}
+
+.icon-upload,
+.icon-checklist,
+.icon-chart {
+  font-size: 36px;
+  margin-bottom: 10px;
+}

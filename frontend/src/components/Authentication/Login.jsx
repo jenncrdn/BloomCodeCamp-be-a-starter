@@ -9,6 +9,9 @@ import './Login.css'
 // });
 
 const Login = () => {
+
+//     const handleClick = () => window.location.href = 'http://localhost:5173/dashboard';
+
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
@@ -17,20 +20,23 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await axios.post('/api/auth/login', { username, password });
-      const token = response.data.token;
+        navigate('/dashboard');
+      };
 
-      // Store the token
-      localStorage.setItem('token', token);
-
-      // Redirect to the dashboard
-      navigate('/dashboard');
-
-    } catch (error) {
-      setError('Invalid username or password');
-    }
-  };
+//     try {
+//       const response = await axios.post('/api/auth/login', { username, password });
+//       const token = response.data.token;
+//
+//       // Store the token
+//       localStorage.setItem('token', token);
+//
+//       // Redirect to the dashboard
+//       navigate('/dashboard');
+//
+//     } catch (error) {
+//       setError('Invalid username or password');
+//     }
+//   };
 
   return (
     <form onSubmit={handleSubmit}>
