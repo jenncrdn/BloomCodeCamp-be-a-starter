@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-// import AssignmentContext from '../../context/AssignmentContext';
+import AssignmentContext from '../../context/AssignmentContext';
 import './AssignmentList.css'
 
 const AssignmentList = () => {
-//   const { assignments, isLoading, error } = useContext(AssignmentContext);
+  const { assignments, isLoading, error } = useContext(AssignmentContext);
 
   if (isLoading) {
     return <p>Loading assignments...</p>;

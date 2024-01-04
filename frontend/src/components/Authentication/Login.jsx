@@ -10,8 +10,6 @@ import './Login.css'
 
 const Login = () => {
 
-//     const handleClick = () => window.location.href = 'http://localhost:5173/dashboard';
-
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
